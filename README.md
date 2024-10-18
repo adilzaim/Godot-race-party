@@ -18,6 +18,7 @@ Ce projet consiste en un jeu de course multijoueur local développé avec le mot
    - Initialise un projet en 3D pour profiter des fonctionnalités de simulation physique.
 
 2. **Configurer les scènes de base** :
+   - Crée une scène pour l'écran de démarrage (`StartMenu.tscn`),pour démarer le jeux.
    - Crée une scène pour l'écran de démarrage (`MainMenu.tscn`), où les joueurs pourront entrer leurs noms.
    - Crée une scène pour représenter une voiture (`Car.tscn`), avec des noeuds pour les roues et le corps.
    - Crée une scène pour la piste de course (`RaceTrack.tscn`) avec un sol, des obstacles et des bonus.

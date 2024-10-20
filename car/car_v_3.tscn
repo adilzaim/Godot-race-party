@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cm4gfukvt7t0s"]
 
-[ext_resource type="Script" path="res://carV3.gd" id="1_g8cys"]
+[ext_resource type="Script" path="res://car/carV3.gd" id="1_g8cys"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_05xao"]
 size = Vector3(1.5, 0.5, 2)

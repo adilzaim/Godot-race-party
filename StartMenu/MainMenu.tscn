@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://bey7i7qhip0l3"]
+
+[ext_resource type="Texture2D" uid="uid://bewgcgmhjnty6" path="res://assets/car.png" id="1_iwvfn"]
+[ext_resource type="Script" path="res://StartMenu/main_menu.gd" id="1_p685x"]
+[ext_resource type="FontFile" uid="uid://crchf4st2itga" path="res://assets/Showdex.ttf" id="2_qfrjo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2f74h"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p685x")
+
+[node name="Car" type="Sprite2D" parent="."]
+position = Vector2(577.5, 267)
+scale = Vector2(1.09722, 0.919444)
+texture = ExtResource("1_iwvfn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -113.0
+offset_right = 146.0
+offset_bottom = 113.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 9
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_2f74h")
+text = "Start Game"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_2f74h")
+text = "Exit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -278.0
+offset_top = -255.0
+offset_right = 325.0
+offset_bottom = -148.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.129412, 0.352941, 0.223529, 1)
+theme_override_fonts/font = ExtResource("2_qfrjo")
+theme_override_font_sizes/font_size = 100
+text = "Godot Race Party"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_exit_pressed"]

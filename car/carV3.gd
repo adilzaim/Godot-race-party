@@ -15,6 +15,7 @@ func _ready() -> void:
 		
 var max_rpm = 500
 var max_torque = 200
+var score = 0
 
 func _physics_process(delta: float) -> void:
 	steering = lerp(steering,Input.get_axis("ui_right","ui_left") * 0.4, delta )
@@ -23,5 +24,13 @@ func _physics_process(delta: float) -> void:
 	$back_left.engine_force =  acceleration * max_torque*(1- rpm / max_rpm)
 	rpm =$back_right.get_rpm()
 	$back_right.engine_force =  acceleration * max_torque*(1- rpm / max_rpm)
-	#GlobalVariable.player_scores["tzz"] +=0.01
-	#print(GlobalVariable.player_scores["tzz"]) 
+
+
+func _on_body_entered(body: Node) -> void:
+	if body.is_in_group("Bonus"): 
+		body.queue_free()  # Supprimer le bonus si la condition est remplie
+		var label =$"../Label"  # Récupérer le Label
+		score = score + 1
+		label.text = "Score : "+ str(score)  # Changer le texte
+		
+		

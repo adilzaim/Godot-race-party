@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c5vd7ra6an5si"]
+[gd_scene load_steps=16 format=3 uid="uid://c5vd7ra6an5si"]
 
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="1_urjfb"]
 [ext_resource type="Resource" path="res://RaceTrack/Hterrains/data.hterrain" id="2_j4nrx"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dxbqmmr45hsii" path="res://RaceTrack/race_track_slot0_normal_roughness.png" id="5_aph44"]
 [ext_resource type="Texture2D" uid="uid://cq4quvyigqk5i" path="res://RaceTrack/textures/Untitled design.png" id="6_smmn1"]
 [ext_resource type="PackedScene" uid="uid://cm4gfukvt7t0s" path="res://car/car_v_3.tscn" id="7_3qnt7"]
+[ext_resource type="PackedScene" uid="uid://c7i2sm0w5ny60" path="res://element/bonus.tscn" id="8_2twu5"]
+[ext_resource type="FontFile" uid="uid://crchf4st2itga" path="res://assets/Showdex.ttf" id="9_vxkxf"]
 
 [sub_resource type="Resource" id="Resource_wdmvs"]
 script = ExtResource("3_65hea")
@@ -21,6 +23,10 @@ uv1_scale = Vector3(500, 500, 1)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_m4knu"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_17ypc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ud6d"]
 
 [node name="RaceTrack" type="Node3D"]
 
@@ -55,7 +61,20 @@ mesh = SubResource("PlaneMesh_c82cf")
 shape = SubResource("ConcavePolygonShape3D_m4knu")
 
 [node name="carV3" parent="." instance=ExtResource("7_3qnt7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124.687, 3.71021, 124.499)
+transform = Transform3D(1.00524, 0, 0, 0, 1.00524, 0, 0, 0, 1.00524, 152.31, 0.00922728, 178)
+
+[node name="bonus" parent="." groups=["Plus"] instance=ExtResource("8_2twu5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.254, -0.999998, 185.963)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 106.0
+offset_bottom = 53.0
+theme_override_fonts/font = ExtResource("9_vxkxf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_17ypc")
+text = "Score : 0"
+label_settings = SubResource("LabelSettings_1ud6d")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.989851, 0.142111, 0, 0.0724555, -0.504678, 0.860262, 0.122252, -0.851531, -0.509852, 0, 158.181, -0.888565)

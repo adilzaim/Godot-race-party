@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d06lrh4uxsdv4"]
+
+[ext_resource type="PackedScene" uid="uid://cqnfwri6wgmm4" path="res://element/pièce.glb" id="1_sss31"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_odibi"]
+
+[node name="pièce" groups=["Bonus"] instance=ExtResource("1_sss31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.898897, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.0108811, -0.325191, -0.0221722)
+shape = SubResource("SphereShape3D_odibi")
+
+[node name="Cercle" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)

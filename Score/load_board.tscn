@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqtvupshn6rwp"]
+
+[ext_resource type="Script" path="res://Score/load_board.gd" id="1_7y4ky"]
+[ext_resource type="PackedScene" uid="uid://dgygkbtm0burn" path="res://addons/quiver_leaderboards/leaderboard_ui.tscn" id="1_7501f"]
+
+[node name="LoadBoard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 49.0
+offset_right = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7y4ky")
+
+[node name="LeaderboardUI" parent="." instance=ExtResource("1_7501f")]
+layout_mode = 1
+leaderboard_id = "scoreraces-scorerace-cW2t"
+
+[node name="Button" type="Button" parent="LeaderboardUI"]
+layout_mode = 0
+offset_right = 55.0
+offset_bottom = 36.0
+text = "Close
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 428.138
+offset_top = 354.399
+offset_right = 713.138
+offset_bottom = 399.399
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Score" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "score"
+
+[node name="Submit" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Submit
+"
+
+[node name="LoadBoard_b" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "LoadBoard"
+
+[connection signal="pressed" from="LeaderboardUI/Button" to="." method="_on_button_pressed"]
+[connection signal="text_submitted" from="HBoxContainer/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="HBoxContainer/Score" to="." method="_on_score_pressed"]
+[connection signal="pressed" from="HBoxContainer/Submit" to="." method="_on_submit_pressed"]
+[connection signal="pressed" from="HBoxContainer/LoadBoard_b" to="." method="_on_load_board_b_pressed"]

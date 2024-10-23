@@ -56,3 +56,6 @@ shape = SubResource("ConcavePolygonShape3D_m4knu")
 
 [node name="carV3" parent="." instance=ExtResource("7_3qnt7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124.687, 3.71021, 124.499)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.989851, 0.142111, 0, 0.0724555, -0.504678, 0.860262, 0.122252, -0.851531, -0.509852, 0, 158.181, -0.888565)

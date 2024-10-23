@@ -15,6 +15,16 @@ run/main_scene="res://RaceTrack/race_track.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Leaderboards="*res://addons/quiver_leaderboards/leaderboards.tscn"
+PlayerAccounts="*res://addons/quiver_player_accounts/player_accounts.tscn"
+GlobalVariable="*res://RaceTrack/GlobalVariable.gd"
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/zylann.hterrain/plugin.cfg")
+enabled=PackedStringArray("res://addons/quiver_leaderboards/plugin.cfg", "res://addons/quiver_player_accounts/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
+
+[quiver]
+
+general/auth_token="XCnE5R2DZZx4yL2VE9139RnFyUNbmQjIfAsUwxev"

@@ -1,6 +1,8 @@
 extends VehicleBody3D
 
 func _ready() -> void:
+	
+	GlobalVariable.current_player_score = 0
 	# Vérifier que le singleton est accessible
 	if GlobalVariable.player_scores:
 		print("Player scores are accessible!")
@@ -31,6 +33,7 @@ func _on_body_entered(body: Node) -> void:
 		body.queue_free()  # Supprimer le bonus si la condition est remplie
 		var label =$"../Label"  # Récupérer le Label
 		score = score + 1
+		GlobalVariable.current_player_score = score
 		label.text = "Score : "+ str(score)  # Changer le texte
 		
 		

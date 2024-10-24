@@ -38,4 +38,4 @@ func _on_button_pressed() -> void:
 		get_tree().change_scene_to_file("res://RaceTrack/race_track.tscn")
 	else:
 		# Sinon, montre le tableau des scores
-		get_tree().change_scene_to_file("res://Score/ScoreBoard.tscn")
+		get_tree().change_scene_to_file("res://Score/load_board.tscn")

@@ -25,31 +25,4 @@ offset_bottom = 36.0
 text = "Close
 "
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 428.138
-offset_top = 354.399
-offset_right = 713.138
-offset_bottom = 399.399
-
-[node name="LineEdit" type="LineEdit" parent="HBoxContainer"]
-layout_mode = 2
-
-[node name="Score" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "score"
-
-[node name="Submit" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "Submit
-"
-
-[node name="LoadBoard_b" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "LoadBoard"
-
 [connection signal="pressed" from="LeaderboardUI/Button" to="." method="_on_button_pressed"]
-[connection signal="text_submitted" from="HBoxContainer/LineEdit" to="." method="_on_line_edit_text_submitted"]
-[connection signal="pressed" from="HBoxContainer/Score" to="." method="_on_score_pressed"]
-[connection signal="pressed" from="HBoxContainer/Submit" to="." method="_on_submit_pressed"]
-[connection signal="pressed" from="HBoxContainer/LoadBoard_b" to="." method="_on_load_board_b_pressed"]

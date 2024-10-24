@@ -13,6 +13,7 @@ func _on_button_pressed() -> void:
 	# Pour chaque joueur dans le dictionnaire, poster un score
 	for player_name in GlobalVariable.player_scores.keys():
 		var score = GlobalVariable.player_scores[player_name]
+		
 		await Leaderboards.post_guest_score("scoreraces-scorerace-cW2t", score, player_name)
 	# Une fois tous les scores postés, changer de scène.
 	get_tree().change_scene_to_file("res://RaceTrack/race_track.tscn")
@@ -48,6 +49,6 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 			print("Player added: %s, Score: %d" % [single_player_name, GlobalVariable.player_scores[single_player_name]])
 		else:
 			print("Aucun nom valide fourni.")
-	
+	GlobalVariable.already_play = GlobalVariable.player_scores;
 	# Afficher les scores des joueurs pour vérification.
 	print(GlobalVariable.player_scores)

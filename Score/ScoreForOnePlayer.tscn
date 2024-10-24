@@ -46,6 +46,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 500.0
 offset_top = 329.0
 offset_right = 686.0
@@ -59,6 +60,7 @@ text = "Next
 "
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 516.0
 offset_top = 210.0
 offset_right = 675.0

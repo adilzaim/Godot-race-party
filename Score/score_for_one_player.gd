@@ -37,5 +37,9 @@ func _on_button_pressed() -> void:
 		# Si un autre joueur doit encore jouer, retourne à la scène du jeu
 		get_tree().change_scene_to_file("res://RaceTrack/race_track.tscn")
 	else:
+		for player_name in GlobalVariable.player_scores.keys():
+			var score = GlobalVariable.player_scores[player_name]
+			
+			await Leaderboards.post_guest_score("scoreraces-scorerace-cW2t", score, player_name)
 		# Sinon, montre le tableau des scores
 		get_tree().change_scene_to_file("res://Score/load_board.tscn")

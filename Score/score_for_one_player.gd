@@ -1,6 +1,5 @@
 extends Control
 
-
 # Variables pour stocker les infos du joueur actuel
 var player_name: String
 var player_score: int
@@ -18,8 +17,7 @@ func _ready() -> void:
 	# Vérifier s'il reste d'autres joueurs à jouer
 	var has_next_player = check_if_more_players()
 	
-	# Afficher ou cacher le bouton "Next" en fonction des joueurs restants
-	$Button.visible = has_next_player
+	
 	
 	# Si aucun joueur n'est disponible, on change le texte du bouton
 	if not has_next_player:
@@ -33,11 +31,11 @@ func check_if_more_players() -> bool:
 			return true
 	return false
 
-
+# Gestion du bouton pour passer à la prochaine action
 func _on_button_pressed() -> void:
 	if check_if_more_players():
 		# Si un autre joueur doit encore jouer, retourne à la scène du jeu
 		get_tree().change_scene_to_file("res://RaceTrack/race_track.tscn")
 	else:
 		# Sinon, montre le tableau des scores
-		get_tree().change_scene_to_file("res://StartMenu/MainMenu.tscn")
+		get_tree().change_scene_to_file("res://Score/ScoreBoard.tscn")

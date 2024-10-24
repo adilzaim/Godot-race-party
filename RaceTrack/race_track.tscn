@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://c5vd7ra6an5si"]
+[gd_scene load_steps=17 format=3 uid="uid://c5vd7ra6an5si"]
 
+[ext_resource type="Script" path="res://RaceTrack/race_track2.gd" id="1_4y7x5"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="1_urjfb"]
 [ext_resource type="Resource" path="res://RaceTrack/Hterrains/data.hterrain" id="2_j4nrx"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_65hea"]
@@ -29,6 +30,7 @@ data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0
 [sub_resource type="LabelSettings" id="LabelSettings_1ud6d"]
 
 [node name="RaceTrack" type="Node3D"]
+script = ExtResource("1_4y7x5")
 
 [node name="Hterrains" type="Node3D" parent="."]
 script = ExtResource("1_urjfb")
@@ -78,3 +80,28 @@ vertical_alignment = 1
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.989851, 0.142111, 0, 0.0724555, -0.504678, 0.860262, 0.122252, -0.851531, -0.509852, 0, 158.181, -0.888565)
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 3.0
+offset_top = 62.0
+offset_right = 109.0
+offset_bottom = 115.0
+theme_override_fonts/font = ExtResource("9_vxkxf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_17ypc")
+text = "Player : "
+label_settings = SubResource("LabelSettings_1ud6d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 817.0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("9_vxkxf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_17ypc")
+text = "Timer
+"
+label_settings = SubResource("LabelSettings_1ud6d")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[node name="ScoreBoard" type="Control"]
+rect_min_size = Vector2(400, 300)
+
+[node name="ScoreLabel" type="Label" parent="ScoreBoard"]
+text = "Score: 0"
+rect_position = Vector2(100, 50)
+rect_size = Vector2(200, 50)
+align = "center"
+valign = "center"
+font_color = Color(1, 0.8, 0) # Jaune
+font_size = 32
+
+[node name="NextButton" type="Button" parent="ScoreBoard"]
+text = "Next"
+rect_position = Vector2(50, 150)
+rect_size = Vector2(150, 50)
+font_color = Color(1, 1, 1) # Blanc
+bg_color = Color(0.2, 0.6, 0.2) # Vert
+
+[node name="FinButton" type="Button" parent="ScoreBoard"]
+text = "Fin"
+rect_position = Vector2(250, 150)
+rect_size = Vector2(150, 50)
+font_color = Color(1, 1, 1) # Blanc
+bg_color = Color(0.8, 0.2, 0.2) # Rouge

@@ -1,9 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlbn1hg2dygx4"]
+[gd_scene load_steps=8 format=3 uid="uid://dlbn1hg2dygx4"]
 
 [ext_resource type="Script" path="res://Score/score_for_one_player.gd" id="1_6v2lq"]
 [ext_resource type="Texture2D" uid="uid://bewgcgmhjnty6" path="res://assets/car.png" id="1_qs66j"]
 
 [sub_resource type="Theme" id="Theme_yjvne"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xm4ge"]
+bg_color = Color(0.764706, 0.427451, 0.109804, 0.894118)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbc1q"]
+bg_color = Color(0.764706, 0.427451, 0.109804, 0.894118)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wwpqm"]
+bg_color = Color(0.764706, 0.427451, 0.109804, 0.894118)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kyj5l"]
 bg_color = Color(1, 1, 1, 1)
@@ -55,6 +76,9 @@ size_flags_vertical = 3
 theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxFlat_xm4ge")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xbc1q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wwpqm")
 theme_override_styles/normal = SubResource("StyleBoxFlat_kyj5l")
 text = "Next
 "

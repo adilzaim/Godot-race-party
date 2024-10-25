@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6dshpblns4ni"]
+
+[ext_resource type="PackedScene" uid="uid://ckrrao4tyfwvb" path="res://element/piere.glb" id="1_wilxu"]
+
+[node name="piere" instance=ExtResource("1_wilxu")]
+
+[node name="Cube" parent="." index="0"]
+transform = Transform3D(4.57009, 0, 0, 0, 8.11874, 0, 0, 0, 1.06775, -0.191809, 0.738098, 0.951616)

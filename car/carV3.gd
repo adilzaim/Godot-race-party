@@ -34,6 +34,7 @@ func _on_body_entered(body: Node) -> void:
 		var label =$"../Label"  # Récupérer le Label
 		score = score + 1
 		GlobalVariable.current_player_score = score
+		#GlobalVariable.player_scores[GlobalVariable.current_player_name] = GlobalVariable.current_player_score
 		label.text = "Score : "+ str(score)  # Changer le texte
 		
 		

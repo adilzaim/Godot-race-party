@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c5vd7ra6an5si"]
+[gd_scene load_steps=18 format=3 uid="uid://c5vd7ra6an5si"]
 
 [ext_resource type="Script" path="res://RaceTrack/race_track2.gd" id="1_4y7x5"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="1_urjfb"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cm4gfukvt7t0s" path="res://car/car_v_3.tscn" id="7_3qnt7"]
 [ext_resource type="PackedScene" uid="uid://c7i2sm0w5ny60" path="res://element/bonus.tscn" id="8_2twu5"]
 [ext_resource type="FontFile" uid="uid://crchf4st2itga" path="res://assets/Showdex.ttf" id="9_vxkxf"]
+[ext_resource type="PackedScene" uid="uid://b6dshpblns4ni" path="res://element/piere.tscn" id="11_oltek"]
 
 [sub_resource type="Resource" id="Resource_wdmvs"]
 script = ExtResource("3_65hea")
@@ -69,8 +70,8 @@ transform = Transform3D(1.00524, 0, 0, 0, 1.00524, 0, 0, 0, 1.00524, 152.31, 0.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.254, -0.999998, 185.963)
 
 [node name="Label" type="Label" parent="."]
-offset_right = 106.0
-offset_bottom = 53.0
+offset_right = 85.0
+offset_bottom = 36.0
 theme_override_fonts/font = ExtResource("9_vxkxf")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_17ypc")
 text = "Score : 0"
@@ -82,10 +83,10 @@ vertical_alignment = 1
 transform = Transform3D(0.989851, 0.142111, 0, 0.0724555, -0.504678, 0.860262, 0.122252, -0.851531, -0.509852, 0, 158.181, -0.888565)
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 3.0
-offset_top = 62.0
-offset_right = 109.0
-offset_bottom = 115.0
+offset_left = 4.0
+offset_top = 31.0
+offset_right = 81.0
+offset_bottom = 62.0
 theme_override_fonts/font = ExtResource("9_vxkxf")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_17ypc")
 text = "Player : "
@@ -94,14 +95,23 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 817.0
+offset_left = 998.0
 offset_top = 1.0
-offset_right = 1152.0
+offset_right = 1141.0
 offset_bottom = 56.0
 theme_override_fonts/font = ExtResource("9_vxkxf")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_17ypc")
 text = "Timer
 "
 label_settings = SubResource("LabelSettings_1ud6d")
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="piere" parent="." instance=ExtResource("11_oltek")]
+transform = Transform3D(4.4687, 0, 0, 0, 3.23826, 0, 0, 0, 2.17143, 173.656, 2.6822, 186.449)
+
+[node name="piere2" parent="." instance=ExtResource("11_oltek")]
+transform = Transform3D(5.45055, 0, 0, 0, 2.9393, 0, 0, 0, 4.42588, 149.578, 4.05832, 201.102)
+
+[node name="piere3" parent="." instance=ExtResource("11_oltek")]
+transform = Transform3D(5.45055, 0, 0, 0, 3.72627, 0, 0, 0, 4.42588, 185.724, -0.915812, 222.205)

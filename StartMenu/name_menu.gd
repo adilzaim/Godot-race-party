@@ -46,6 +46,12 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 			print("Player added: %s, Score: %d" % [single_player_name, GlobalVariable.player_scores[single_player_name]])
 		else:
 			print("Aucun nom valide fourni.")
-	GlobalVariable.already_play = GlobalVariable.player_scores;
+	# Copier toutes les clés de player_scores dans already_play avec une valeur de 0 pour chacune
+	GlobalVariable.already_play = {}
+
+# Boucle sur chaque clé dans player_scores
+	for key in GlobalVariable.player_scores.keys():
+		GlobalVariable.already_play[key] = 0  # Initialiser chaque clé avec 0
+	
 	# Afficher les scores des joueurs pour vérification.
 	print(GlobalVariable.player_scores)

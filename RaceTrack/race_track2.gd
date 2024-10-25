@@ -41,24 +41,10 @@ func next_player():
 # Fonction pour afficher le nom du joueur actuel dans le Label
 func update_player_name():
 	var current_player_name = player_names[current_player_index]
+	GlobalVariable.current_player_name = current_player_name
 	$Label2.text = "Player : " + current_player_name
 
-# Fonction pour mettre à jour le score du joueur actuel
-func update_player_score(new_score: int):
-	var current_player_name = player_names[current_player_index]
-	
-	# Mettre à jour le score du joueur actuel dans GlobalVariable
-	GlobalVariable.player_scores[current_player_name] = new_score
-	
-	# Marquer le joueur comme ayant joué
-	GlobalVariable.already_play[current_player_name] = 1
-	
-	# Stocker le score et le nom dans GlobalVariable pour utilisation future
-	GlobalVariable.current_player_name = current_player_name
-	
-	
-	# Passer au joueur suivant
-	next_player()
+
 
 # Fonction appelée à chaque frame
 func _process(delta: float) -> void:
@@ -76,17 +62,16 @@ func _process(delta: float) -> void:
 func end_game():
 	# Vérifier et récupérer le nom et le score du joueur actuel
 	var current_player_name = player_names[current_player_index]
-	var current_player_score = GlobalVariable.player_scores[current_player_name]
 	
-	# Stocker le nom et le score dans les variables globales (important)
-	GlobalVariable.current_player_name = current_player_name
+	
+	
 	
 	
 	# Marquer le joueur comme ayant joué (évite qu'il rejoue)
 	GlobalVariable.already_play[current_player_name] = 1
 	
 	# Debugging pour vérifier que le score est bien mis à jour
-	print("Player: ", current_player_name, " Score: ", current_player_score)
+	
 	
 	# Changer de scène pour afficher le score du joueur actuel
 	get_tree().change_scene_to_file("res://Score/ScoreForOnePlayer.tscn")

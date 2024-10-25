@@ -28,13 +28,5 @@ func _physics_process(delta: float) -> void:
 	$back_right.engine_force =  acceleration * max_torque*(1- rpm / max_rpm)
 
 
-func _on_body_entered(body: Node) -> void:
-	if body.is_in_group("Bonus"): 
-		body.queue_free()  # Supprimer le bonus si la condition est remplie
-		var label =$"../Label"  # Récupérer le Label
-		score = score + 1
-		GlobalVariable.current_player_score = score
-		#GlobalVariable.player_scores[GlobalVariable.current_player_name] = GlobalVariable.player_scores[GlobalVariable.current_player_name] +1
-		label.text = "Score : "+ str(score)  # Changer le texte
 		
 		

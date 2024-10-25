@@ -16,7 +16,7 @@ height = 0.25
 radial_segments = 12
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xh7o8"]
-size = Vector3(1.96902, 0.828125, 2.2654)
+size = Vector3(1.5896, 0.828125, 2.10309)
 
 [node name="carV3" type="VehicleBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.488172, 0)
@@ -76,7 +76,7 @@ transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 
 mesh = SubResource("CylinderMesh_hdu5g")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00947571, 0.0284296, 0.0988541)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0499901, 0.0284296, 0.0177007)
 shape = SubResource("BoxShape3D_xh7o8")
 
 [node name="Camera3D" type="Camera3D" parent="."]

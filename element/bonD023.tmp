@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7i2sm0w5ny60"]
+
+[ext_resource type="Script" path="res://element/bonus.gd" id="1_ih1m5"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1vvh6"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4vrbn"]
+height = 0.6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jthnm"]
+albedo_color = Color(0.84, 0.56658, 0.0588, 1)
+disable_receive_shadows = true
+
+[node name="bonus" type="StaticBody3D" groups=["Bonus"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.16, 0, 0, 0, 2.16, 0, 0, 0, 2.16, 0, 2.32716, 0)
+shape = SubResource("CylinderShape3D_1vvh6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.17387, 0, 0, 0, -3.17839e-08, -2.2028, 0, 0.727132, -9.62875e-08, 0, 1.0531, 0)
+mesh = SubResource("CylinderMesh_4vrbn")
+surface_material_override/0 = SubResource("StandardMaterial3D_jthnm")
+script = ExtResource("1_ih1m5")

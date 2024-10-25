@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c5vd7ra6an5si"]
+[gd_scene load_steps=19 format=3 uid="uid://c5vd7ra6an5si"]
 
 [ext_resource type="Script" path="res://RaceTrack/race_track2.gd" id="1_4y7x5"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="1_urjfb"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c7i2sm0w5ny60" path="res://element/bonus.tscn" id="8_2twu5"]
 [ext_resource type="FontFile" uid="uid://crchf4st2itga" path="res://assets/Showdex.ttf" id="9_vxkxf"]
 [ext_resource type="PackedScene" uid="uid://b6dshpblns4ni" path="res://element/piere.tscn" id="11_oltek"]
+[ext_resource type="PackedScene" uid="uid://i1smto3kywbt" path="res://element/Coin.tscn" id="12_dvepp"]
 
 [sub_resource type="Resource" id="Resource_wdmvs"]
 script = ExtResource("3_65hea")
@@ -68,6 +69,7 @@ transform = Transform3D(1.00524, 0, 0, 0, 1.00524, 0, 0, 0, 1.00524, 152.31, 0.0
 
 [node name="bonus" parent="." groups=["Plus"] instance=ExtResource("8_2twu5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.254, -0.999998, 185.963)
+visible = false
 
 [node name="Label" type="Label" parent="."]
 offset_right = 85.0
@@ -115,3 +117,15 @@ transform = Transform3D(5.45055, 0, 0, 0, 2.9393, 0, 0, 0, 4.42588, 149.578, 4.0
 
 [node name="piere3" parent="." instance=ExtResource("11_oltek")]
 transform = Transform3D(5.45055, 0, 0, 0, 3.72627, 0, 0, 0, 4.42588, 185.724, -0.915812, 222.205)
+
+[node name="Coin" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 146.468, -1.01767, 185.867)
+
+[node name="Coin2" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 158.239, -0.922512, 202.01)
+
+[node name="Coin3" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 146.712, -1.01767, 195.036)
+
+[node name="Coin4" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 182.282, -1.01767, 235.534)

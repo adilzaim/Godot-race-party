@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dlbn1hg2dygx4"]
+[gd_scene load_steps=9 format=3 uid="uid://dlbn1hg2dygx4"]
 
 [ext_resource type="Script" path="res://Score/score_for_one_player.gd" id="1_6v2lq"]
 [ext_resource type="Texture2D" uid="uid://bewgcgmhjnty6" path="res://assets/car.png" id="1_qs66j"]
+[ext_resource type="FontFile" uid="uid://crchf4st2itga" path="res://assets/Showdex.ttf" id="3_1pp0q"]
 
 [sub_resource type="Theme" id="Theme_yjvne"]
 
@@ -43,35 +44,61 @@ grow_vertical = 2
 script = ExtResource("1_6v2lq")
 
 [node name="Car" type="Sprite2D" parent="."]
-position = Vector2(574.5, 291)
-scale = Vector2(1.06759, 1)
+position = Vector2(679, 299)
+scale = Vector2(1.35972, 1)
 texture = ExtResource("1_qs66j")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 modulate = Color(0, 0.431373, 0.439216, 0.921569)
-layout_mode = 0
-offset_right = 1145.0
-offset_bottom = 649.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -679.5
+offset_top = -326.0
+offset_right = 679.5
+offset_bottom = 326.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = SubResource("Theme_yjvne")
+alignment = 1
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 520.0
-offset_top = 114.0
-offset_right = 679.0
-offset_bottom = 175.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.5
+offset_top = -30.5
+offset_right = 79.5
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1pp0q")
 theme_override_font_sizes/font_size = 33
 text = "Score : "
 horizontal_alignment = 1
 vertical_alignment = 1
+uppercase = true
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 500.0
-offset_top = 329.0
-offset_right = 686.0
-offset_bottom = 413.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -133.0
+offset_top = 79.0
+offset_right = 134.0
+offset_bottom = 163.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_vertical = 3
 theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -84,15 +111,24 @@ text = "Next
 "
 
 [node name="Label2" type="Label" parent="."]
-layout_mode = 0
-offset_left = 516.0
-offset_top = 210.0
-offset_right = 675.0
-offset_bottom = 271.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = -136.0
+offset_right = 78.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1pp0q")
 theme_override_font_sizes/font_size = 33
 text = "Score : "
 horizontal_alignment = 1
 vertical_alignment = 1
+uppercase = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

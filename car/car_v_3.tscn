@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cm4gfukvt7t0s"]
+[gd_scene load_steps=7 format=3 uid="uid://cm4gfukvt7t0s"]
 
 [ext_resource type="Script" path="res://car/carV3.gd" id="1_g8cys"]
+[ext_resource type="AudioStream" uid="uid://dp06yaxcjyljm" path="res://assets/car-changing-gears-sound-188962.mp3" id="2_1esk2"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_05xao"]
 size = Vector3(1.5, 0.5, 2)
@@ -81,5 +82,9 @@ shape = SubResource("BoxShape3D_xh7o8")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.999486, -2.34291e-10, -0.0320736, -0.00848712, 0.964355, 0.264478, 0.0309303, 0.264614, -0.963858, 0, 0.984474, -2.21308)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_1esk2")
+volume_db = -16.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

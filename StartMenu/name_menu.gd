@@ -10,8 +10,11 @@ func _ready() -> void:
 func _on_button_pressed() -> void:
 	print("Button go pressed")
 	print(GlobalVariable.player_scores)
+	# Récupérer le texte dans le LineEdit.
+	var line_edit_text = $VBoxContainer/Panel/LineEdit.text
+	_on_line_edit_text_submitted(line_edit_text)
 	# Pour chaque joueur dans le dictionnaire, poster un score
-	
+
 	# Une fois tous les scores postés, changer de scène.
 	get_tree().change_scene_to_file("res://RaceTrack/race_track.tscn")
 

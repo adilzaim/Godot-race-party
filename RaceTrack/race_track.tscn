@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c5vd7ra6an5si"]
+[gd_scene load_steps=20 format=3 uid="uid://c5vd7ra6an5si"]
 
 [ext_resource type="Script" path="res://RaceTrack/race_track2.gd" id="1_4y7x5"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="1_urjfb"]
@@ -12,6 +12,7 @@
 [ext_resource type="FontFile" uid="uid://crchf4st2itga" path="res://assets/Showdex.ttf" id="9_vxkxf"]
 [ext_resource type="PackedScene" uid="uid://b6dshpblns4ni" path="res://element/piere.tscn" id="11_oltek"]
 [ext_resource type="PackedScene" uid="uid://i1smto3kywbt" path="res://element/Coin.tscn" id="12_dvepp"]
+[ext_resource type="PackedScene" uid="uid://ckrrao4tyfwvb" path="res://element/piere.glb" id="13_tte35"]
 
 [sub_resource type="Resource" id="Resource_wdmvs"]
 script = ExtResource("3_65hea")
@@ -65,7 +66,7 @@ mesh = SubResource("PlaneMesh_c82cf")
 shape = SubResource("ConcavePolygonShape3D_m4knu")
 
 [node name="carV3" parent="." instance=ExtResource("7_3qnt7")]
-transform = Transform3D(1.00524, 0, 0, 0, 1.00524, 0, 0, 0, 1.00524, 152.31, 0.00922728, 178)
+transform = Transform3D(1.00524, 0, 0, 0, 1.00524, 0, 0, 0, 1.00524, 152.31, 0.00922728, 154.677)
 
 [node name="bonus" parent="." groups=["Plus"] instance=ExtResource("8_2twu5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.254, -0.999998, 185.963)
@@ -113,19 +114,76 @@ vertical_alignment = 1
 transform = Transform3D(4.4687, 0, 0, 0, 3.23826, 0, 0, 0, 2.17143, 173.656, 2.6822, 186.449)
 
 [node name="piere2" parent="." instance=ExtResource("11_oltek")]
-transform = Transform3D(5.45055, 0, 0, 0, 2.9393, 0, 0, 0, 4.42588, 149.578, 4.05832, 201.102)
+transform = Transform3D(5.45055, 0, 0, 0, 2.9393, 0, 0, 0, 4.42588, 149.772, 4.05832, 232.266)
 
 [node name="piere3" parent="." instance=ExtResource("11_oltek")]
-transform = Transform3D(5.45055, 0, 0, 0, 3.72627, 0, 0, 0, 4.42588, 185.724, -0.915812, 222.205)
+transform = Transform3D(5.45055, 0, 0, 0, 3.72627, 0, 0, 0, 4.42588, 212.567, -0.915812, 306.374)
 
 [node name="Coin" parent="." instance=ExtResource("12_dvepp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 146.468, -1.01767, 185.867)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 154.673, -1.01767, 171.327)
 
 [node name="Coin2" parent="." instance=ExtResource("12_dvepp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 158.239, -0.922512, 202.01)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 162.616, -0.922512, 202.01)
 
 [node name="Coin3" parent="." instance=ExtResource("12_dvepp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 146.712, -1.01767, 195.036)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 146.712, -1.01767, 179.851)
 
 [node name="Coin4" parent="." instance=ExtResource("12_dvepp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 182.282, -1.01767, 235.534)
+
+[node name="Coin5" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.463, 0.2044, 221.352)
+
+[node name="Coin6" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 173.401, -1, 251.79)
+
+[node name="Coin7" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 170.522, -1, 270.52)
+
+[node name="Coin8" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 212.964, -1, 314.095)
+
+[node name="Coin9" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 188.115, -1.00001, 333.605)
+
+[node name="Coin10" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 191.198, -0.999992, 318.979)
+
+[node name="Coin11" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 195.533, -1, 360.667)
+
+[node name="Coin12" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 156.91, -0.999985, 381.926)
+
+[node name="Coin13" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 162.488, -1, 420.832)
+
+[node name="Coin14" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 136.58, -1.00002, 415.455)
+
+[node name="Coin15" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 106.17, -1, 403.137)
+
+[node name="Coin16" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94.9541, -1, 423.137)
+
+[node name="Coin17" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.9861, -1, 404.746)
+
+[node name="Coin18" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.6765, -1, 398.693)
+
+[node name="Coin19" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7625, -1, 417.164)
+
+[node name="Coin20" parent="." instance=ExtResource("12_dvepp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3504, -1, 398.596)
+
+[node name="piere4" parent="." instance=ExtResource("13_tte35")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.5239, -0.999992, 413.441)
+
+[node name="piere5" parent="." instance=ExtResource("13_tte35")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.0916, -1.00001, 397.54)
+
+[node name="piere6" parent="." instance=ExtResource("13_tte35")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.0806, -1, 414.939)

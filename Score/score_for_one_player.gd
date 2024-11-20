@@ -12,7 +12,7 @@ func _ready() -> void:
 
 	# Afficher le nom et le score du joueur
 	$Label.text = "Player: " + player_name
-	$Label2.text = "Score: " + str(player_score)
+	$Label2.text = "Final Score: " + str(player_score)
 	
 	# Vérifier s'il reste d'autres joueurs à jouer
 	var has_next_player = check_if_more_players()

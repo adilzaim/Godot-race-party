@@ -18,14 +18,29 @@ func _ready() -> void:
 var max_rpm = 500
 var max_torque = 200
 var score = 0
+@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 func _physics_process(delta: float) -> void:
-	steering = lerp(steering,Input.get_axis("ui_right","ui_left") * 0.4, delta )
-	var acceleration = Input.get_axis("ui_down","ui_up") 
-	var rpm = $back_left.get_rpm()
-	$back_left.engine_force =  acceleration * max_torque*(1- rpm / max_rpm)
-	rpm =$back_right.get_rpm()
-	$back_right.engine_force =  acceleration * max_torque*(1- rpm / max_rpm)
+	steering = lerp(steering, Input.get_axis("ui_right", "ui_left") * 0.4, delta)
+	var acceleration = Input.get_axis("ui_down", "ui_up")
+	var rpm_left = $back_left.get_rpm()
+	var rpm_right = $back_right.get_rpm()
+	
+	$back_left.engine_force = acceleration * max_torque * (1 - rpm_left / max_rpm)
+	$back_right.engine_force = acceleration * max_torque * (1 - rpm_right / max_rpm)
+	
+	# Si l'accélération est non nulle et le son n'est pas déjà joué, on le joue
+	if acceleration != 0:
+		if not audio_stream_player_3d.playing:
+			audio_stream_player_3d.play()
+		
+		# Ajustez le pitch en fonction du régime moteur
+		var avg_rpm = (rpm_left + rpm_right) / 2
+		audio_stream_player_3d.pitch_scale = 1.0 + (avg_rpm / max_rpm) * 0.5  # Ajustez ce facteur pour varier la hauteur
+	else:
+		# Arrête le son si l'accélération est à zéro
+		audio_stream_player_3d.stop()
+
 
 
 		

@@ -6,7 +6,7 @@ var player_names: Array = GlobalVariable.get_player_scores().keys()
 # Index du joueur actuel
 var current_player_index: int = 0
 
-var timer = 10  # Le temps pour chaque partie (en secondes)
+var timer = 30  # Le temps pour chaque partie (en secondes)
 
 # Fonction appelée quand le node est prêt
 func _ready() -> void:
